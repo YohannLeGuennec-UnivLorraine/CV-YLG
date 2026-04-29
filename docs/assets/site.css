@@ -37,10 +37,16 @@ a {
   padding: 30px 28px;
 }
 
-.hero-top {
+.hero-head {
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 8px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.hero-text {
+  min-width: 0;
 }
 
 .profile-photo {
@@ -135,5 +141,9 @@ h1 {
   .page {
     width: min(100% - 24px, 980px);
     padding-top: 22px;
+  }
+
+  .hero-head {
+    align-items: flex-start;
   }
 }
