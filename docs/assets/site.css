@@ -107,6 +107,16 @@ h1 {
   margin-top: 7px;
 }
 
+.subsection + .subsection {
+  margin-top: 16px;
+}
+
+.subsection h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
 @media (max-width: 700px) {
   .page {
     width: min(100% - 24px, 980px);
