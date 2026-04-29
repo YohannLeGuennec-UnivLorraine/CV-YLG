@@ -1,12 +1,11 @@
 ﻿:root {
-  --bg: #f7f3ea;
-  --paper: #fffdf8;
-  --ink: #20201d;
-  --muted: #69655d;
-  --rule: #d9d0c0;
-  --accent: #0e6f6b;
-  --accent-strong: #094e4c;
-  --highlight: #d44d2c;
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --ink: #1e2833;
+  --muted: #5f6f82;
+  --rule: #d7dfe8;
+  --accent: #165d8f;
+  --accent-soft: #eef5fb;
 }
 
 * {
@@ -16,104 +15,101 @@
 body {
   margin: 0;
   color: var(--ink);
-  background:
-    linear-gradient(90deg, rgba(14, 111, 107, 0.08) 1px, transparent 1px),
-    linear-gradient(rgba(14, 111, 107, 0.06) 1px, transparent 1px),
-    var(--bg);
-  background-size: 32px 32px;
-  font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.55;
+  background: var(--bg);
+  font-family: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
 }
 
 a {
-  color: var(--accent-strong);
+  color: var(--accent);
 }
 
 .page {
-  width: min(980px, calc(100% - 32px));
+  width: min(920px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 56px 0 72px;
+  padding: 38px 0 64px;
 }
 
 .hero {
-  border-top: 6px solid var(--accent);
-  padding: 34px 0 42px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 30px 28px;
 }
 
 .kicker {
-  margin: 0 0 20px;
-  color: var(--highlight);
-  font: 700 0.8rem/1.2 Verdana, sans-serif;
-  letter-spacing: 0;
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
 h1 {
-  max-width: 760px;
+  max-width: 700px;
   margin: 0;
-  font-size: clamp(3rem, 8vw, 7rem);
-  line-height: 0.9;
+  font-size: clamp(2rem, 4.8vw, 3.4rem);
+  line-height: 1.05;
 }
 
 .subtitle {
-  margin: 18px 0 0;
-  color: var(--accent-strong);
-  font-size: clamp(1.25rem, 3vw, 2rem);
+  margin: 12px 0 0;
+  color: var(--accent);
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  font-weight: 600;
 }
 
 .intro {
-  max-width: 720px;
-  margin: 26px 0 0;
+  max-width: 740px;
+  margin: 16px 0 0;
   color: var(--muted);
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .meta,
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 18px;
-  margin-top: 24px;
-  font-family: Verdana, sans-serif;
-  font-size: 0.95rem;
+  gap: 10px 14px;
+  margin-top: 16px;
+  font-size: 0.93rem;
 }
 
 .links a {
-  border-bottom: 2px solid var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid #d5e3f1;
+  border-radius: 6px;
+  padding: 5px 10px;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .section {
-  display: grid;
-  grid-template-columns: minmax(180px, 280px) 1fr;
-  gap: 28px;
-  border-top: 1px solid var(--rule);
-  padding: 28px 0;
+  margin-top: 18px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 20px 24px;
 }
 
 .section h2 {
-  margin: 0;
-  color: var(--accent-strong);
-  font-size: 1.35rem;
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: 1.2rem;
 }
 
 .section ul {
   margin: 0;
-  padding-left: 1.2rem;
+  padding-left: 1rem;
 }
 
 .section li + li {
-  margin-top: 8px;
+  margin-top: 7px;
 }
 
 @media (max-width: 700px) {
   .page {
     width: min(100% - 24px, 980px);
-    padding-top: 32px;
-  }
-
-  .section {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    padding-top: 22px;
   }
 }
