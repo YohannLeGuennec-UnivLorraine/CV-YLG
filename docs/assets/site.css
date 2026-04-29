@@ -37,6 +37,20 @@ a {
   padding: 30px 28px;
 }
 
+.hero-top {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.profile-photo {
+  width: 108px;
+  height: 108px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+}
+
 .kicker {
   margin: 0 0 10px;
   color: var(--muted);
