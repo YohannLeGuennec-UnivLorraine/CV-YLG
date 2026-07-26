@@ -13,7 +13,8 @@ layout: null
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  {% for post in site.posts %}
+  {% assign posts_by_date = site.pages | where: "blog_post", true | sort: "date" | reverse %}
+  {% for post in posts_by_date %}
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>

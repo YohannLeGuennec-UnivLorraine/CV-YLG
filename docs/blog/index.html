@@ -41,7 +41,7 @@ description: Publications de Yohann Le Guennec sur la recherche, l'enseignement 
         <p class="intro">Retours d’expérience, actualités scientifiques et ressources autour de la chromatographie, de l’hydrométallurgie et du génie des procédés.</p>
       </header>
 
-      {% assign posts_by_date = site.posts | sort: "date" | reverse %}
+      {% assign posts_by_date = site.pages | where: "blog_post", true | sort: "date" | reverse %}
       {% if posts_by_date.size > 0 %}
         <ol class="post-list" aria-label="Publications, de la plus récente à la plus ancienne">
           {% for post in posts_by_date %}

@@ -3,14 +3,12 @@ title: Yohann Le Guennec
 description: Enseignement, recherche et publications en génie des procédés.
 url: "https://yohannleguennec-univlorraine.github.io"
 baseurl: "/CV-YLG"
-permalink: /blog/:year/:month/:day/:title/
 timezone: Europe/Paris
 future: false
 
 defaults:
   - scope:
-      path: ""
-      type: posts
+      path: "blog/posts"
     values:
       layout: post
       author: Yohann Le Guennec
