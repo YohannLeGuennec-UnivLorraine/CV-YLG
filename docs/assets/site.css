@@ -227,6 +227,14 @@ h1 {
   font-size: 1.2rem;
 }
 
+.title-icon {
+  display: inline-block;
+  min-width: 1.45em;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+  font-style: normal;
+  text-align: center;
+}
+
 .section ul {
   margin: 0;
   padding-left: 1rem;
@@ -251,33 +259,6 @@ h1 {
   color: var(--accent);
 }
 
-.work-packages {
-  display: grid;
-  gap: 12px;
-  margin-top: 16px;
-}
-
-.work-package {
-  padding: 14px 16px;
-  background: var(--accent-soft);
-  border: 1px solid #d5e3f1;
-  border-radius: 7px;
-}
-
-.work-package h3,
-.work-package p {
-  margin: 0;
-}
-
-.work-package h3 {
-  color: var(--accent);
-  font-size: 1rem;
-}
-
-.work-package p {
-  margin-top: 7px;
-}
-
 .publication-list {
   padding-left: 1.4rem;
 }
@@ -292,26 +273,6 @@ h1 {
   font-size: 0.92rem;
 }
 
-details {
-  border: 1px solid var(--rule);
-  border-radius: 7px;
-  padding: 10px 12px;
-}
-
-details + details {
-  margin-top: 8px;
-}
-
-summary {
-  color: var(--accent);
-  cursor: pointer;
-  font-weight: 600;
-}
-
-details ul {
-  margin-top: 10px !important;
-}
-
 .last-updated {
   margin: 18px 4px 0;
   color: var(--muted);
@@ -319,8 +280,7 @@ details ul {
   text-align: right;
 }
 
-a:focus-visible,
-summary:focus-visible {
+a:focus-visible {
   outline: 3px solid #8fc4ea;
   outline-offset: 3px;
 }
