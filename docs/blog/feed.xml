@@ -1,0 +1,21 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog de Yohann Le Guennec</title>
+  <link href="{{ site.url }}{{ site.baseurl }}/blog/feed.xml" rel="self" />
+  <link href="{{ site.url }}{{ site.baseurl }}/blog/" />
+  <updated>{% if site.posts.first %}{{ site.posts.first.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}</updated>
+  <id>{{ site.url }}{{ site.baseurl }}/blog/</id>
+  <author><name>Yohann Le Guennec</name></author>
+  {% for post in site.posts limit:20 %}
+    <entry>
+      <title>{{ post.title | xml_escape }}</title>
+      <link href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" />
+      <updated>{{ post.date | date_to_xmlschema }}</updated>
+      <id>{{ site.url }}{{ site.baseurl }}{{ post.url }}</id>
+      <summary>{{ post.excerpt | strip_html | normalize_whitespace | xml_escape }}</summary>
+    </entry>
+  {% endfor %}
+</feed>
